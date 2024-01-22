@@ -1,0 +1,89 @@
+Question: What type of tree is in front of the blue building?
+Choices: [palm tree, bonsai tree, maple tree, pine tree]
+Caption: a group of people standing on a beach with a palm tree in front of a blue building
+AI: Reasoning: Since the question asks about the tree, we first locate it in the image. Hypothesis: [palm tree, bonsai tree, maple tree, pine tree] Verification: locate(tree) Answer: None
+Human: Located tree
+AI: Reasoning: The caption mentioned that the tree in front of the blue building is a palm tree. We can verify it. Hypothesis: [palm tree] Verification: filter(tree, palm) Answer: None
+Human: True
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: palm tree
+
+Question: Which vegetable in this soup is heart shaped?
+Choices: [lima bean, carrot, onion, tomato]
+Caption: a bowl of soup with a spoon in it the heart shaped vegetable is heart shaped
+AI: Reasoning: We first need to locate the heart shaped vegetable in the image. Hypothesis: [lima bean, carrot, onion, tomato] Verification: locate(heart shaped vegetable) Answer: None
+Human: Located heart shaped vegetable
+AI: Reasoning: We can use the visual attribute of the vegetable to determine which one is heart shaped. Hypothesis: [lima bean, carrot, onion, tomato] Verification: query_attribute(heart shaped vegetable, color) Answer: None
+Human: orange
+AI: Reasoning: Since the color of the vegetable is orange, it is probably carrot. Hypothesis: None Verification: None Answer: carrot
+
+Question: What is this game played with?
+Choices: [rugby ball, ball, puck, golfball]
+Caption: a baseball player holding a bat on a field
+AI: Reasoning: Since the captioning mentions a baseball player holding a bat, we can infer that the game is played with a ball. Hypothesis: None Verification: None Answer: ball
+
+Question: Which Disney mascot is pictured next to the Christmas Tree?
+Choices: [daffy duck, goofy, micky mouse, donald duck]
+Caption: a daffy duck standing next to a christmas tree
+AI: Reasoning: Daffy Duck is not a Disney character, but a Warner Bros character. It may be Donald Duck. Hypothesis: [donald duck] Verification: simple_query(Is this Disney mascot Donald Duck?) Answer: None
+Human: True
+AI: Reasoning: The vision model verifies the hypothesis. Hypothesis: None Verification: None Answer: donald duck
+
+Question: How long does the average giraffe live?
+Choices: [50 years, 15 years, 20-30 years, 40 years]
+Caption: a giraffe and a bird in a field
+AI: Reasoning: This question can be answered without the image. The average lifespan of a giraffe is 25 years, thus the answer should be 20-30 years. Hypothesis: None Verification: None Answer: 20-30 years
+
+Question: Why is the phone wrapped in a pink enclosure?
+Choices: [protect it, encrypt it, prevent stains, decoration]
+Caption: a group of people sitting around a table with a pink phone
+AI: Reasoning: The phone is usually wrapped by an enclosure for protection. Hypothesis: None Verification: None Answer: protect it
+
+Question: What are the traditional long printed skirts worn by the women called?
+Choices: [broomstick skirt, sarong, prairie skirt, accordion skirt]
+Caption: a group of people sitting around a table with food on it the women are wearing long printed skirts
+AI: Reasoning: Since the question asks about the skirts wore by the women, we first locate them in the image. Hypothesis: [broomstick skirt, sarong, prairie skirt, accordion skirt] Verification: locate(woman) Answer: None
+Human: Located woman
+AI: Reasoning: We can verify the answer choices using vision model one by one. Hypothesis: [broomstick skirt, sarong, prairie skirt, accordion skirt] Verification: simple_query(Are the traditional long printed skirts sarongs?) Answer: None
+Human: yes
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: sarong
+
+Question: What animals are in the grass behind the woman in yellow?
+Choices: [sheep, foxes, birds, cats]
+Caption: a woman in yellow standing next to a yellow fire hydrant with cats in the grass
+AI: Reasoning: Since the question asks about the animal, we first locate it in the image. Hypothesis: [sheep, foxes, birds, cats] Verification: locate(animal) Answer: None
+Human: Located animal
+AI: Reasoning: Since the caption mentions cats, we can verify using vision function. Hypothesis: [cats] Verification: exist(cat) Answer: None
+Human: True
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: cats
+
+Question: The colors on the bus match the colors on what flag?
+Choices: [united states, mexico, sweden, italy]
+Caption: a yellow and blue bus driving down a street
+AI: Reasoning: We can verify the colors of the bus to compare with flags. Hypothesis: [united states, mexico, sweden, italy] Verification: query_attribute(bus, color) Answer: None
+Human: yellow and blue
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: sweden
+
+Question: What is this street vendor in black shirt and hat selling at her stand?
+Choices: [green peppers, mango peppers, hot peppers, banana peppers]
+Caption: a street vendor in black shirt and hat selling fruit
+AI: Reasoning: We can first locate the street vendor. Hypothesis: [green peppers, mango peppers, hot peppers, banana peppers] Verification: locate(street vendor) Answer: None
+Human: Located street vendor
+AI: Reasoning: The caption conflicts with the answer choices. We can use vision model to verify each of the answer choices. Hypothesis: [green peppers, mango peppers, hot peppers, banana peppers] Verification: exist(green peppers) Answer: None
+Human: False
+AI: Reasoning: Next we verify another answer choice with high probability. Verification: exist(hot peppers) Answer: None
+Human: True
+AI: Reasoning: Since the vision model verifies the hypothesis from the image captioning, we can decide the answer. Hypothesis: None Verification: None Answer: hot peppers
+
+Question: What is the term for the brown marks on the bottom portion of the fire hydrant?
+Choices: [rust, sunder, demarcations, paint]
+Caption: a white fire hydrant with brown marks on the bottom portion
+AI: Reasoning: Since the question asks about the brown marks on the fire hydrant, we first locate it in the image. Hypothesis: None Verification: locate(fire hydrant) Answer: None
+Human: Located fire hydrant
+AI: Reasoning: The brown marks on the bottom portion of the fire hydrant are often called rust. Hypothesis: [rust] Verification: filter(fire hydrant, rust) Answer: None
+Human: True
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: rust
+
+Question: What must the player in blue touch the player in red with to win the play?
+Choices: [ball, head, foot, pants]
+Caption: a group of boys playing baseball with a player in blue touching the player in red with to win the play
+AI: Reasoning: From the captioning we know that they are playing baseball. It is highly likely that the player in blue must touch the player in red with the ball. Hypothesis: None Verification: None Answer: ball

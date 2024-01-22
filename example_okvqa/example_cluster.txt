@@ -1,0 +1,61 @@
+Question: Name the material used to make this car seat shown in this picture?
+AI:description()
+Human:a cat sitting on the back of a car seat
+AI:We need to first locate the car seat. Next step: locate(car seat)
+Human:Located car seat
+AI:Car seats are often made of leather, fabric or vinyl. We can use the attribute model to make an initial hypothesis. Next step: query_attribute(car seat, material)
+Human:fabric
+AI:The hypothesis is in line with common sense. We can use the filter model to verify the hypothesis. Next step: filter(car seat, fabric)
+Human:True
+AI:Since the verification matches the hypothesis, we can decide the answer. The answer is: fabric
+
+Question: How long has ultimate frisbee been an official sport?
+AI:description()
+Human:a group of people playing frisbee on a field
+AI:Ultimate Frisbee became an official sport in 1985 when the Ultimate Players Association (now known as USA Ultimate) was founded. The answer is: 1985
+
+Question: What kind of plant is this wreath made from?
+AI:description()
+Human:a green wreath with a red bow on a door
+AI:We need to first locate the wreath. Next step: locate(wreath)
+Human:Located wreath
+AI:Since the green wreath has a red bow on it and is decorated on a door, it is possibly for Christmas. Christmas wreath is often made from pine tree. Next step: simple_query(Is the wreath made of pine tree?)
+Human:yes
+AI:Since the verification matches the hypothesis, we can decide the answer. The answer is: pine tree
+
+Question: How long is this animals tongue?
+AI:description()
+Human:a giraffe eating a carrot with a long tongue
+AI:We need to first locate the giraffe. Next step: locate(giraffe)
+Human:Located giraffe
+AI:The tongue of a giraffe is typically 18 to 20 inches. Since the giraffe has a long tongue, it might be 20 inches. We can verify if its tongue is long. Next step: filter(tongue, long)
+Human:True
+AI:Since the verification matches the hypothesis, we can decide the answer. The answer is: 20 inches
+
+Question: What item normally used by stair climbers to maneuver forward with their arms is not on view here?
+AI:description()
+Human:a living room with a couch and a table
+AI:A common item used by stair climbers to help them maneuver forward with their arms could be a hand rail. We can verify if there is a hand rail in the image. Next step: exist(hand rail)
+Human:True
+AI:The verification conflicts with the hypothesis. Based on common sense knowledge, we can give the answer with maximum probability. The answer is: hand rail
+
+Question: Which tony jaa film contains this animal being rescued by the main character?
+AI:description()
+Human:an elephant standing next to a tree
+AI:The Tony Jaa film that contains an elephant being rescued by the main character is called Warrior King. The answer is: Warrior King
+
+Question: Which of these appliances would you heat your noodles in?
+AI:description()
+Human:a kitchen with a refrigerator and a dishwasher
+AI:We often use microwave for heating. We can verify if there is a microwave. Next step: exist(microwave)
+Human:True
+AI:Since the verification matches the hypothesis, we can decide the answer. The answer is: microwave
+
+Question: What is the purple vegetable above the spaghetti squash?
+AI:description()
+Human:a pile of vegetables including spaghetti squash
+AI:We need to first locate the purple vegetable. Next step: crop(spaghetti squash, above)
+Human:Cropped image
+AI:Purple vegetable is often eggplant. We can verify if it is eggplant. Next step: exist(eggplant)
+Human:True
+AI:Since the verification matches the hypothesis, we can decide the answer. The answer is: eggplant

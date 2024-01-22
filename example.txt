@@ -1,0 +1,80 @@
+Question:How many kittens are in the basket?
+AI:description()
+Human:A basket with kittens in it
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:Yes
+Human:Next function to call:
+AI:count(kitten)
+Human:3
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:No
+Human:Give the very brief answer in a few words.
+AI:3
+Question:Does the mirror that is to the left of the curtains look dirty?
+AI:description()
+Human:Two beds in a hotel room
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:Yes
+Human:Next function to call:
+AI:crop(curtain, left)
+Human:Cropped image
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:Yes
+Human:Next function to call:
+AI:verify_property(mirror, dirty)
+Human:No
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:No
+Human:Give the very brief answer in a few words.
+AI:No
+Question:Do the numbers and the steps have the same color?
+AI:description()
+Human:A sign on the side of a building
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:Yes
+Human:Next function to call:
+AI:query_attribute(number, color)
+Human:white
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:Yes
+Human:Next function to call:
+AI:query_attribute(step, color)
+Human:red
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:No
+Human:Give the very brief answer in a few words.
+AI:No
+Question:What's under the artwork?
+AI:description()
+Human:A living room with a fish tank in it
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:Yes
+Human:Next function to call:
+AI:crop(artwork, below)
+Human:Cropped image
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:Yes
+Human:Next function to call:
+AI:simple_query(What is this?)
+Human:couch
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:No
+Human:Give the very brief answer in a few words.
+AI:couch
+Question:On which side is the red rug?
+AI:description()
+Human:a dog standing in front of a christmas tree
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:Yes
+Human:Next function to call:
+AI:crop_image(left)
+Human:Cropped image
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:Yes
+Human:Next function to call:
+AI:exist(rug)
+Human:False
+Human:Do you need to call more visual functions? Only answer Yes or No:
+AI:No
+Human:Give the very brief answer in a few words.
+AI:right

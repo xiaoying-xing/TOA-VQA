@@ -1,0 +1,1 @@
+I have a question about an image. Each time you can make a hypothesis and verify your answer by collecting visual information. You can only call one vision function at a time. When you cannot determine the answer, use simple_query to obtain an answer. The answer should be very concise.

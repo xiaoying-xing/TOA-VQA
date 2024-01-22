@@ -1,0 +1,17 @@
+I have a question about an image. Each time you can make a hypothesis and verify your answer by collecting visual information. You can use the following visual functions to gather information. You can only call one vision function at a time. When you cannot determine the answer, use simple_query to obtain an answer. The answer should be very concise.
+exist(object_name:str)->bool
+	Returns True if the object specified by object_name is found in the image, and False otherwise.
+query_attribute(object_name:str, visual_attribute:str)->str
+	Returns the attribute of the object specified by object_name. Presupposes the existence of the object. The parameter visual_attribute is a nominal class name, such as color, shape, material.
+filter(object_name:str, property:str)->bool
+	Returns True if the object possesses the property, and False otherwise. Presupposes the existence of the object.
+simple_query(question:str)->str
+	Returns the answer to a simple question about the image without external knowledge.
+count(object_name:str)->int
+	Returns the number of the object specified by object_name.
+locate(object_name:str)->image
+	Returns a crop of the image containing the object specified by object_name.
+crop(object_name:str, direction:str)->image
+	Returns a crop of the image to the specified direction of the object. The parameter direction can be [left, right, above, below].
+crop_image(direction:str)->image
+	Returns a crop of the image by half to the specified direction. The parameter direction can be [left, right, above, below].

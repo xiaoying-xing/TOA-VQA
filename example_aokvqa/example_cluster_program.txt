@@ -1,0 +1,97 @@
+Question: What is prohibited near the round road sign with a red cross on a blue background?
+Caption: a group of people riding motorcycles down a street with a round road sign with a red cross on a blue background
+AI: Reasoning: We can directly answer this question. The round road sign with a red cross on a blue background means no passing. Hypothesis: None Verification: None Answer: passing
+
+Question: What type of tree is in front of the blue building?
+Caption: a group of people standing on a beach with a palm tree in front of a blue building
+AI: Reasoning: Since the question asks about the tree, we first locate it in the image. Hypothesis: None Verification: locate(tree) Answer: None
+Human: Located tree
+AI: Reasoning: The caption mentioned that the tree in front of the blue building is a palm tree. We can verify it. Hypothesis: [palm tree] Verification: filter(tree, palm) Answer: None
+Human: True
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: palm tree
+
+Question: Which vegetable in this soup is heart shaped?
+Caption: a bowl of soup with a spoon in it the heart shaped vegetable is heart shaped
+AI: Reasoning: We first need to locate the heart shaped vegetable in the image. Hypothesis: None Verification: locate(heart shaped vegetable) Answer: None
+Human: Located heart shaped vegetable
+AI: Reasoning: We can use the visual attribute of the vegetable to determine which one is heart shaped. Hypothesis: [carrot, tomato, potato] Verification: query_attribute(heart shaped vegetable, color) Answer: None
+Human: orange
+AI: Reasoning: Since the color of the vegetable is orange, it is probably carrot. Hypothesis: None Verification: None Answer: carrot
+
+Question: Which city is this sign in which contains the Heumarkt transit stop?
+Caption: a group of people walking on a street in London
+AI: Reasoning: There are several cities that have a transit stop or station called Heumarkt. Cologne, Germany has an underground station. Vienna, Austria has a bus stop. Zurich, Switzerland has a tram stop. We can query about the type of the transit stop. Hypothesis: [Cologne, Vienna, Zurich] Verification: query_attribute(transit stop, type) Answer: None
+Human: underground
+AI: Reasoning: Since it is an underground station, it is probably Cologne, Germany. Hypothesis: None Verification: None Answer: Cologne
+
+Question: What is this game played with?
+Caption: a baseball player holding a bat on a field
+AI: Reasoning: Since the captioning mentions a baseball player holding a bat, we can infer that the game is played with a ball and a bat. Hypothesis: None Verification: None Answer: ball bat
+
+Question: Which Disney mascot is pictured next to the Christmas Tree? 
+Caption: a daffy duck standing next to a christmas tree
+AI: Reasoning: Daffy Duck is not a Disney character, but a Warner Bros character. It may be Donald Duck. Hypothesis: [Donald Duck] Verification: simple_query(Is this Disney mascot Donald Duck?) Answer: None
+Human: True
+AI: Reasoning: The vision model verifies the hypothesis. Hypothesis: None Verification: None Answer: Donald Duck
+
+Question: How long does the average giraffe live?
+Caption: a giraffe and a bird in a field
+AI: Reasoning: This question can be answered without the image. The average lifespan of a giraffe is 25 years. Hypothesis: None Verification: None Answer: 25 years
+
+Question: Why is the phone wrapped in a pink enclosure?
+Caption: a group of people sitting around a table with a pink phone
+AI: Reasoning: The phone is usually wrapped by an enclosure for protection. Hypothesis: None Verification: None Answer: protect
+
+Question: What are the traditional long printed skirts worn by the women called?
+Caption: a group of people sitting around a table with food on it the women are wearing long printed skirts
+AI: Reasoning: Since the question asks about the skirts wore by the women, we first locate them in the image. Hypothesis: None Verification: locate(woman) Answer: None
+Human: Located woman
+AI: Reasoning: The traditional long printed skirts worn by women are often called sarongs or wrap skirts. We can verify if they are sarongs. Hypothesis: [sarongs, wrap skirts] Verification: simple_query(Are the traditional long printed skirts sarongs?) Answer: None
+Human: yes
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: sarongs
+
+Question: What animals are in the grass behind the woman in yellow?
+Caption: a woman in yellow standing next to a yellow fire hydrant with cats in the grass
+AI: Reasoning: Since the question asks about the animal, we first locate it in the image. Hypothesis: None Verification: locate(animal) Answer: None
+Human: Located animal
+AI: Reasoning: Since the caption mentions cats, we can verify using vision function. Hypothesis: [cats] Verification: simple_query(Are the animals cats?) Answer: None
+Human: yes
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: cats
+
+Question: What kind of vehicle is the one that says Deere?
+Caption: a street sign with a excavator in the background
+AI: Reasoning: Since the question asks about the vehicle, we first locate it in the image. Hypothesis: None Verification: locate(vehicle) Answer: None
+Human: Located vehicle
+AI: Reasoning: Deere is a brand of heavy equipment, including excavators. We can verify if the vehicle is an excavator. Hypothesis: [excavator] Verification: simple_query(Is the vehicle excavator?) Answer: None
+Human: True
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: excavator
+
+Question: The colors on the bus match the colors on what flag?
+Caption: a yellow and blue bus driving down a street
+AI: Reasoning: We can verify the colors of the bus to compare with flags. Hypothesis: [Sweden] Verification: query_attribute(bus, color) Answer: None
+Human: yellow and blue
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: Sweden
+
+Question: What is the most diverse seashore bird?
+Caption: a man standing on the beach with a flock of birds
+AI: Reasoning: This question can be answered without the image. The most diverse seashore bird is seagull. Hypothesis: None Verification: None Answer: seagull
+
+Question: What is this street vendor in black shirt and hat selling at her stand?
+Caption: a street vendor in black shirt and hat selling fruit
+AI: Reasoning: We can first locate the street vendor. Hypothesis: None Verification: locate(street vendor) Answer: None
+Human: Located street vendor
+AI: Reasoning: From the captioning we know that the street vendor is selling fruit. We can use vision model to verify. Hypothesis: [fruit] Verification: exist(fruit) Answer: None
+Human: True
+AI: Reasoning: Since the vision model verifies the hypothesis from the image captioning, we can decide the answer. Hypothesis: None Verification: None Answer: fruit
+
+Question: What is the term for the brown marks on the bottom portion of the fire hydrant?
+Caption: a white fire hydrant with brown marks on the bottom portion
+AI: Reasoning: Since the question asks about the brown marks on the fire hydrant, we first locate it in the image. Hypothesis: None Verification: locate(fire hydrant) Answer: None
+Human: Located fire hydrant
+AI: Reasoning: The brown marks on the bottom portion of the fire hydrant are often called rust. Hypothesis: [rust] Verification: filter(fire hydrant, rust) Answer: None
+Human: True
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: rust
+
+Question: What must the player in blue touch the player in red with to win the play?
+Caption: a group of boys playing baseball with a player in blue touching the player in red with to win the play
+AI: Reasoning: From the captioning we know that they are playing baseball. It is highly likely that the player in blue must touch the player in red with the ball. Hypothesis: None Verification: None Answer: ball

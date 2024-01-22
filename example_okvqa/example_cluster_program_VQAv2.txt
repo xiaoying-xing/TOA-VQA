@@ -1,0 +1,93 @@
+Question: Is the horse being used as transportation?
+Caption: a woman riding a horse in a field
+AI: Reasoning: Since the woman is riding the horse, it is highly likely that the horse is being used as transportation. Hypothesis: None Verification: None Answer: yes
+
+Question: What color is the tray?
+Caption: a cake on a blue tray
+AI: Reasoning: From the image captioning, we know that the tray is blue. Hypothesis: None Verification: None Answer: blue
+
+Question: Does this look like stuffed crust?
+Caption: a slice of pizza on a plate
+AI: Reasoning: Since the question asks about the appearance of the pizza, we can verify if it has stuffed crust. Hypothesis: [yes] Verification: filter(pizza, stuffed crust) Answer: None
+Human: True
+AI: Reasoning: Since the verification agrees with the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: yes
+
+Question: Is the tub clean?
+Caption: a dirty bathroom with a bathtub and a sink
+AI: Reasoning: Since the caption describes the bathroom as dirty, it is likely that the tub is not clean. We can verify if the tub is clean. Hypothesis: [no] Verification: filter(tub, clean) Answer: None
+Human: False
+AI: Reasoning: Since the verification agrees with the hypothesis, we can determine that the tub is not clean. Hypothesis: None Verification: None Answer: no
+
+Question: What ethnicity is the boy?
+Caption: a white boy riding a surfboard on a wave
+AI: Reasoning: From the image captioning, we can infer that the boy is white. Hypothesis: None Verification: None Answer: white
+
+Question: Is the elephant in the foreground dry?
+Caption: a herd of elephants standing on top of a dry grass field
+AI: Reasoning: Since the caption mentions that the elephants are standing on top of a dry grass field, we can infer that the elephant in the foreground is also dry. Hypothesis: [yes] Verification: filter(elephant, dry) Answer: None
+Human: True
+AI: Reasoning: The verification agrees with the hypothesis, so we can conclude that the elephant in the foreground is indeed dry. Hypothesis: None Verification: None Answer: yes
+
+Question: What does the card next to the mouse say?
+Caption: a laptop computer sitting on top of a desk with a card next to the mouse saying yahoo
+AI: Reasoning: From the captioning, we know that there is a card next to the mouse on the desk. The card says yahoo. Hypothesis: None Verification: None Answer: yahoo
+
+Question: Are the cats sleeping?
+Caption: two cats sitting on a window sill
+AI: Reasoning: From the captioning, we can see that the cats are sitting on a window sill. We can use vision models to verify if the cats are sleeping. Hypothesis: None Verification: filter(cat, sleeping) Answer: None
+Human: False
+AI: Reasoning: We can decide the answer according to the vision model. Hypothesis: None Verification: None Answer: no
+
+Question: What color is this person's coat?
+Caption: a person in green coat skiing down a snowy slope
+AI: Reasoning: From the image captioning, we know that the person is wearing a green coat. We can verify the color of the coat. Hypothesis: [green] Verification: query_attribute(coat, color) Answer: None
+Human: green
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: green
+
+Question: What is the name of the food shown?
+Caption: a pizza with a slice missing
+AI: Reasoning: Since the caption mentions a pizza, we can verify if there exists a pizza in the image. Hypothesis: [pizza] Verification: exist(pizza) Answer: None
+Human: True
+AI: Reasoning: Since the vision model verifies the hypothesis, we can decide the answer. Hypothesis: None Verification: None Answer: pizza
+
+Question: What color is the railing on the deck?
+Caption: a vase of flowers in front of a window with a brown railing on the deck
+AI: Reasoning: From the image captioning, we know that the railing on the deck is brown. We can verify using the vision model. Hypothesis: [brown] Verification: filter(railing, brown) Answer: None
+Human: False
+AI: Reasoning: The vision model conflicts with current hypothesis. We need to further query about the attribute. Hypothesis: None Verification: query_attribute(railing, color) Answer: None
+Human: yellow
+AI: Reasoning: We can decide the answer according to the vision model. Hypothesis: None Verification: None Answer: yellow
+
+Question: What Wii game is the person playing?
+Caption: a person playing a wii game
+AI: Reasoning: Since the question asks about the Wii game being played, we first locate the person in the image. Hypothesis: None Verification: locate(person) Answer: None
+Human: Located person
+AI: Reasoning: Since we have located the person playing the Wii game, we can use the vision model to obtain the answer. Hypothesis: None Verification: simple_query(What Wii game is the person playing?) Answer: None
+Human: golf
+AI: Reasoning: Since the simple query provides the answer, we can decide the answer. Hypothesis: None Verification: None Answer: golf
+
+Question: Is this a jungle?
+Caption: a herd of elephants walking down a dirt road
+AI: Reasoning: Since there are elephants, it is probably a jungle. We can verify it using the vision model. Hypothesis: [yes] Verification: simple_query(Is this a jungle?) Answer: None
+Human: yes
+AI: Reasoning: The verification agrees with the hypothesis, so we can conclude that it is a jungle. Hypothesis: None Verification: None Answer: yes
+
+Question: Can you see mountains?
+Caption: a boat with two men on it with mountains in the background
+AI: Reasoning: Since the caption mentions mountains in the background, we can verify if mountains are visible in the image. Hypothesis: [yes] Verification: exist(mountains) Answer: None
+Human: True
+AI: Reasoning: The verification agrees with the hypothesis, so we can decide the answer. Hypothesis: None Verification: None Answer: yes
+
+Question: How many steps are in the flight of stairs?
+Caption: a sheep standing in the middle of a field of flowers with 2 steps in the flight of stairs
+AI: Reasoning: Since the caption mentions that there are 2 steps in the flight of stairs, we can directly verify this information. Hypothesis: [2] Verification: count(steps) Answer: None
+Human: 4
+AI: Reasoning: The verification conflicts with the hypothesis. We call the simple_query function to obtain the answer. Hypothesis: [2,4] Verification: simple_query(How many steps are in the flight of stairs?) Answer: None
+Human: 10
+AI: Reasoning: Since the verification provides a different answer, we can decide the answer with maximum probability. Hypothesis: None Verification: None Answer: ten
+
+Question: What color is the car in the picture?
+Caption: a white car parked in front of a building
+AI: Reasoning: From the image captioning, we know that the car is white. We can directly verify the color of the car. Hypothesis: [white] Verification: query_attribute(car, color) Answer: None
+Human: white and yellow
+AI: Reasoning: Since the vision model verifies that the car is white, we can decide the answer. Hypothesis: None Verification: None Answer: white
