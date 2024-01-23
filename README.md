@@ -12,7 +12,7 @@ Official code for "TOA: Task-oriented Active VQA" (Neurips 2023)
 ### Executing program
 Quick command to run the code
 ```
-python main_vqa.py --filename name
+python main_vqa.py --filename name --openai_key your_key
 ```
 
 ## Citation
