@@ -120,10 +120,7 @@ def main(args):
             with open(save_dir, 'w') as f:
                 json.dump(pred, f)
 
-            #with open('/files0/home/xiaoying/chatVQA/experiments/test/OKVQA/chathist_prog_cluster24.json', 'w') as f:
-            #    json.dump(chat_hist, f)
-
-            # restart the program
+            # restart the program when broken
             process = subprocess.Popen(['python', "main_vqa.py"])
             process.terminate()
             atexit.register(process.terminate)
